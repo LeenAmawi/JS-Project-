@@ -57,3 +57,9 @@ form{
     padding: 20px 40px 0px 40px;
 
 }
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px 30px;
+  
+}
