@@ -2,9 +2,16 @@
     padding: 0;
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .container{
     margin: auto;
     width: 90%;
+}
+h2{
+text-align: center;
+font-size: 30px;
+margin-top:50px ;
+
 }
 
