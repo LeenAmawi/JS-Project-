@@ -5,8 +5,10 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 :root{
-    --primary:#2860d0;
+    --primary:#42a2b3;
     --red:#bb2d2d;
+    --gray:rgb(177, 169, 169);
+    
 }
 .container{
     margin: auto;
@@ -16,12 +18,14 @@ h2{
 text-align: center;
 font-size: 30px;
 margin-top:50px ;
+margin-bottom: 50px;
 
 }
 input[type="text"]
 {
     width:100%;
     padding: 10px;
+    border:1px solid var(--gray)
     /* margin-bottom: 20px; */
 }
 .btn{
@@ -43,5 +47,13 @@ input[type="text"]
     background-color: var(--primary);
     padding:10px ;
     width: 40px;
+    i{
+        color: white;
+    }
     
+}
+form{
+    border: 1px solid rgb(177, 169, 169);
+    padding: 20px 40px 0px 40px;
+
 }
