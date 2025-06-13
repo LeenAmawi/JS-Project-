@@ -70,3 +70,8 @@ form{
 .grid.btnRed{
     grid-template-columns: 1fr 1fr;
 }
+table {
+      border-collapse: separate;
+      border-spacing: 0 15px;  
+      width: 100%;
+    }
