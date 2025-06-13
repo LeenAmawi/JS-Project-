@@ -4,6 +4,10 @@
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+:root{
+    --primary:#2860d0;
+    --red:#bb2d2d;
+}
 .container{
     margin: auto;
     width: 80%;
@@ -25,4 +29,7 @@ input[type="text"]
  padding: 10px;
  border: none;
  margin-bottom: 20px;
+ background-color: var(--primary);
+ color: white;
+ font-size: 15px;
 }
