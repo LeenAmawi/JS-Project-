@@ -61,5 +61,12 @@ form{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0px 30px;
-  
+}
+.btnRed{
+    .btn{
+        background-color: var(--red);
+    }
+}
+.grid.btnRed{
+    grid-template-columns: 1fr 1fr;
 }
