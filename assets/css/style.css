@@ -74,4 +74,16 @@ table {
       border-collapse: separate;
       border-spacing: 0 15px;  
       width: 100%;
+
+      th{
+      text-align: center;
+      padding: 10px;
+    }
+
+    td {
+      background-color: #fdfdfd; 
+      padding: 10px;
+      text-align: center;
+    }
+
     }
