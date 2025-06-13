@@ -6,7 +6,7 @@
 }
 .container{
     margin: auto;
-    width: 90%;
+    width: 80%;
 }
 h2{
 text-align: center;
@@ -14,4 +14,8 @@ font-size: 30px;
 margin-top:50px ;
 
 }
-
+input[type="text"]
+{
+    width:100%;
+    padding: 10px;
+}
