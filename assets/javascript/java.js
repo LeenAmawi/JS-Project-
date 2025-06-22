@@ -121,4 +121,14 @@ document.getElementById("confirmYes").addEventListener("click", function () {
   } else if (actionType === "deleteAll") {
     tasks = [];
   }
+  actionType = null;
+  document.getElementById("confirmBox").style.display = "none";
+  renderTasks(currentFilter);
+});
+document.getElementById("confirmNo").addEventListener("click", function () {
+  actionType = null;
+  deleteId = null;
+  renameId = null;
+  document.getElementById("confirmBox").style.display = "none";
+});
 
