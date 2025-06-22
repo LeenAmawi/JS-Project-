@@ -53,3 +53,38 @@ function renderTasks(filter = "all") {
       <td class="${lineClass}" style="width: 75%; padding: 8px; vertical-align: middle;">
         ${task.name}
       </td>
+      <td class="actions" style="width: 20%; text-align: right; vertical-align: middle; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-pen" onclick="renameTask(${task.id})" title="edit"
+        <i class="fa-solid fa-trash" onclick="confirmDelete(${task.id})" title="delete" style="color: red; cursor: pointer; font-size: 18px;"></i>
+      </td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+function toggleDone(id) {
+  const task = tasks.find(t => t.id === id);
+  if (task) {
+    task.done = !task.done;
+    renderTasks(currentFilter);
+  }
+}
+function renameTask(id) {
+  actionType = "rename";
+  renameId = id;
+showConfirmBox("Enter a new name (at least 5 characters):", true);
+}
+function confirmDelete(id) {
+  actionType = "deleteSingle";
+  deleteId = id;
+  showConfirmBox("Are you sure you want to delete this task?", false);
+}
+document.querySelectorAll(".btnRed .btn")[0].addEventListener("click", () => {
+  actionType = "deleteDone";
+  showConfirmBox("Do you want to delete the completed tasks?", false);
+});
+document.querySelectorAll(".btnRed .btn")[1].addEventListener("click", () => {
+  actionType = "deleteAll";
+  showConfirmBox("Do you want to delete all tasks?", false);
+});
+
+
