@@ -21,3 +21,9 @@ oldMsg.style.color = "red";
 oldMsg.style.marginTop = "5px";
 oldMsg.style.fontSize = "14px";
 const parent = input.closest(".flex") || input.parentNode;
+parent.appendChild(oldMsg);
+    }
+    return;
+  }
+
+  if (oldMsg) oldMsg.remove();
