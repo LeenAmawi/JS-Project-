@@ -27,3 +27,7 @@ parent.appendChild(oldMsg);
   }
 
   if (oldMsg) oldMsg.remove();
+  tasks.push({ name: value, done: false, id: Date.now() });
+  input.value = "";
+  renderTasks(currentFilter);
+}
