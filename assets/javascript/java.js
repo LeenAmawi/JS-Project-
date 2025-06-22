@@ -31,3 +31,5 @@ parent.appendChild(oldMsg);
   input.value = "";
   renderTasks(currentFilter);
 }
+function renderTasks(filter = "all") {
+  const tbody = document.getElementById("taskList");
