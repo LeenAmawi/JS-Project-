@@ -131,4 +131,17 @@ document.getElementById("confirmNo").addEventListener("click", function () {
   renameId = null;
   document.getElementById("confirmBox").style.display = "none";
 });
+const filterButtons = document.querySelectorAll(".grid button");
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const text = btn.textContent.trim().toLowerCase();
+    if (["all", "done", "todo"].includes(text)) {
+      currentFilter = text;
+      renderTasks(currentFilter);
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+    }
+  });
+});
+renderTasks();
 
