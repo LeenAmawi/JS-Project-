@@ -53,3 +53,12 @@ function renderTasks(filter = "all") {
       <td class="${lineClass}" style="width: 75%; padding: 8px; vertical-align: middle;">
         ${task.name}
       </td>
+      <td class="actions" style="width: 20%; text-align: right; vertical-align: middle; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-pen" onclick="renameTask(${task.id})" title="edit"
+        <i class="fa-solid fa-trash" onclick="confirmDelete(${task.id})" title="delete" style="color: red; cursor: pointer; font-size: 18px;"></i>
+      </td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
