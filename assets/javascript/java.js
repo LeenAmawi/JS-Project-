@@ -18,3 +18,6 @@ if (!oldMsg) {
 oldMsg.id = "errorMsg";
 oldMsg.textContent = "Please enter at least 5 characters.";
 oldMsg.style.color = "red";
+oldMsg.style.marginTop = "5px";
+oldMsg.style.fontSize = "14px";
+const parent = input.closest(".flex") || input.parentNode;
