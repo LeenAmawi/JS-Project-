@@ -16,3 +16,5 @@ if (value.length < 5) {
 if (!oldMsg) {
   oldMsg = document.createElement("div");
 oldMsg.id = "errorMsg";
+oldMsg.textContent = "Please enter at least 5 characters.";
+oldMsg.style.color = "red";
