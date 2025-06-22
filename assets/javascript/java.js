@@ -61,4 +61,30 @@ function renderTasks(filter = "all") {
     tbody.appendChild(row);
   });
 }
+function toggleDone(id) {
+  const task = tasks.find(t => t.id === id);
+  if (task) {
+    task.done = !task.done;
+    renderTasks(currentFilter);
+  }
+}
+function renameTask(id) {
+  actionType = "rename";
+  renameId = id;
+showConfirmBox("Enter a new name (at least 5 characters):", true);
+}
+function confirmDelete(id) {
+  actionType = "deleteSingle";
+  deleteId = id;
+  showConfirmBox("Are you sure you want to delete this task?", false);
+}
+document.querySelectorAll(".btnRed .btn")[0].addEventListener("click", () => {
+  actionType = "deleteDone";
+  showConfirmBox("Do you want to delete the completed tasks?", false);
+});
+document.querySelectorAll(".btnRed .btn")[1].addEventListener("click", () => {
+  actionType = "deleteAll";
+  showConfirmBox("Do you want to delete all tasks?", false);
+});
+
 
