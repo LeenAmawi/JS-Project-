@@ -33,3 +33,6 @@ parent.appendChild(oldMsg);
 }
 function renderTasks(filter = "all") {
   const tbody = document.getElementById("taskList");
+  tbody.innerHTML = "";
+
+  let filteredTasks = tasks;
