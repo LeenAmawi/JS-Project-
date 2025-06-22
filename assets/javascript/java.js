@@ -14,3 +14,5 @@ const value = input.value.trim();
 let oldMsg = document.getElementById("errorMsg");
 if (value.length < 5) {
 if (!oldMsg) {
+  oldMsg = document.createElement("div");
+oldMsg.id = "errorMsg";
