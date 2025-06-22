@@ -86,5 +86,39 @@ document.querySelectorAll(".btnRed .btn")[1].addEventListener("click", () => {
   actionType = "deleteAll";
   showConfirmBox("Do you want to delete all tasks?", false);
 });
+function showConfirmBox(message, isRename) {
+  const box = document.getElementById("confirmBox");
+  box.style.display = "flex";
 
+  const p = box.querySelector("p");
+  p.textContent = message;
+
+  const inputRename = box.querySelector("#renameInput");
+  if (isRename) {
+    inputRename.style.display = "block";
+    inputRename.value = tasks.find(t => t.id === renameId)?.name || "";
+    inputRename.focus();
+  } else {
+    inputRename.style.display = "none";
+    inputRename.value = "";
+  }
+}
+document.getElementById("confirmYes").addEventListener("click", function () {
+  if (actionType === "rename") {
+    const newName = document.getElementById("renameInput").value.trim();
+    if (newName.length < 5) {
+      alert("The name must be at least 5 characters long.");
+      return;
+    }
+ const task = tasks.find(t => t.id === renameId);
+    if (task) task.name = newName;
+    renameId = null;
+  } else if (actionType === "deleteSingle") {
+    tasks = tasks.filter(t => t.id !== deleteId);
+    deleteId = null;
+  } else if (actionType === "deleteDone") {
+    tasks = tasks.filter(t => !t.done);
+  } else if (actionType === "deleteAll") {
+    tasks = [];
+  }
 
