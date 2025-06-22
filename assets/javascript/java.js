@@ -38,3 +38,5 @@ function renderTasks(filter = "all") {
   let filteredTasks = tasks;
   if (filter === "done") filteredTasks = tasks.filter(t => t.done);
   else if (filter === "todo") filteredTasks = tasks.filter(t => !t.done);
+  filteredTasks.forEach(task => {
+    const checked = task.done ? "checked" : "";
