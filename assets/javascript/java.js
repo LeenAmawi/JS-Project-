@@ -43,3 +43,13 @@ function renderTasks(filter = "all") {
     const lineClass = task.done ? "line-through" : "";
 
     const row = document.createElement("tr");
+        row.style.border = "1px solid #ccc";
+        row.style.borderRadius = "6px";
+    row.style.backgroundColor = "#fff";
+    row.innerHTML = `
+      <td style="width: 5%; text-align: center; vertical-align: middle;">
+        <input type="checkbox" onchange="toggleDone(${task.id})" ${checked} style="cursor: pointer;">
+      </td>
+      <td class="${lineClass}" style="width: 75%; padding: 8px; vertical-align: middle;">
+        ${task.name}
+      </td>
