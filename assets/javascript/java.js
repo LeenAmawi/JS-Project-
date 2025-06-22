@@ -10,3 +10,5 @@ document.querySelector("form").addEventListener("submit", function (e) {
 });
 function saveTask() {
 const input = document.getElementById("txtItem");
+const value = input.value.trim();
+let oldMsg = document.getElementById("errorMsg");
