@@ -72,29 +72,103 @@ form{
     grid-template-columns: 1fr 1fr;
 }
 table {
-      border-collapse: separate;
-      border-spacing: 0 15px;  
-      width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
 
-      th{
-      text-align: center;
-      padding: 10px;
-    }
+td {
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
 
-    td {
-      background-color: #fdfdfd; 
-      padding: 10px;
-      text-align: center;
-    }
-    tbody tr {
-      box-shadow: 0 0 0 2px black; 
-      border-radius: 8px;
-    }
+.line-through {
+  text-decoration: line-through;
+  color: var(--red);
+}
 
+i {
+  cursor: pointer;
+  font-size: 18px;
+}
 
-    }
+i.fa-pen {
+  color: orange;
+  margin-right: 10px;
+}
+
+i.fa-trash {
+  color: var(--red);
+}
+
 
 
  .btn:hover {
   transform: translateY(5px);
+}
+
+#confirmBox {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
+
+#confirmBox .Div {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  width: 320px;
+  text-align: center;
+}
+
+#confirmMessage {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#renameInput {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+
+#confirmBox button {
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 8px;
+  min-width: 90px;
+  transition: background-color 0.3s ease;
+}
+
+#confirmYes {
+  background-color: var(--red);
+  color: white;
+}
+
+#confirmYes:hover {
+  background-color: var(--red);
+}
+
+#confirmNo {
+  background-color: #999;
+  color: white;
+}
+
+#confirmNo:hover {
+  background-color: #777;
 }
