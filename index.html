@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/all.min.css">
-    <title>Todo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/all.min.css" />
 </head>
 <body>
-    <main>
-        <section class="TodoSection">
-    <div class="container">
+  <main>
+    <section class="TodoSection">
+      <div class="container">
         <div class="content">
-        <h2>TodoInput</h2>
-        <form action="">
-        
+          <h2>Todo Input</h2>
+          <form id="taskForm">
             <div class="flex">
-              <div class="Icon"><i class="fa-solid fa-book"></i></div>
-      <input type="text"  placeholder="New Todo" id="txtItem">
-    </div>
-      <button class="btn" onclick="saveTask()">Add new task</button>
-    </form>
-    </div>
-    <h2>Todo List</h2>
-     <div class="grid">
-        <button class="btn"> Alll</button>
-        <button class="btn">Done</button>
-        <button class="btn">Todo</button>
-     </div>
-<table>
-  <tbody id="taskList">
-   
-  </tbody>
-</table>
-     <div class="grid btnRed">
-     
-            <button class="btn" >delete Done</button>
-      <button class="btn">delete All</button>
-     </div>
-    </div>
+              <div class="Icon">
+                <i class="fa-solid fa-book"></i>
+              </div>
+              <input type="text" placeholder="New Todo" id="txtItem" />
+            </div>
+            <button class="btn" type="submit">Add new task</button>
+          </form>
+        </div>
+
+        <h2>Todo List</h2>
+        <div class="grid">
+          <button class="btn">All</button>
+          <button class="btn">Done</button>
+          <button class="btn">Todo</button>
+        </div>
+
+        <table>
+          <tbody id="taskList"></tbody>
+        </table>
+
+        <div class="grid btnRed">
+          <button class="btn">Delete Done</button>
+          <button class="btn">Delete All</button>
+        </div>
+      </div>
     </section>
-    </main>
-  <script src="assets/javascript/java.js"></script>  
+  </main>
+
+  <div id="confirmBox" style="display: none;">
+    <div class="Div">
+      <p id="confirmMessage">Are you sure you want to delete this task?</p>
+      <input type="text" id="renameInput" placeholder="New name..." style="display:none;" />
+      <button id="confirmYes">Yes</button>
+      <button id="confirmNo">No</button>
+    </div>
+  </div>
+
+  <script src="assets/javascript/java.js"></script>
 </body>
 </html>
